@@ -1,104 +1,124 @@
-html, body { /* Go over this */
-    background-image: url("resources/img/backgrounds.png"); /* Define background */
-    text-align: center;
-    height: 100%;
-    width: 100%;
-  }
-  
-  body {
-    font-size: 18px;
-    font-family: 'Inconsolata', monospace; /* Font familys may need an import */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  button { /* Go over this */
-    border-radius: 8px;
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-    padding: 16px 16px;
-  
-    font-size: 36px;
-    font-family: 'Inconsolata', monospace;
-  }
-  
-  button:hover { /* Go over this */
-    background-color: #c7c7c7;
-    box-shadow: 0 12px 16px 0 rgb(255, 255, 255), 0 17px 50px 0 rgb(255, 255, 255);
-  }
-  
-  .container { /* Go over this */
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-  }
-  
-  #question, #celebration, #main, #answers, #answers p{ 
-    width: 80%;
-    margin: auto;
-  }
-  
-  #answers > p { /* Go over this */
-    margin-top: 15px;
-    margin-bottom: 15px;
-  }
-  
-  #question, #celebration > h1 {
-    text-decoration: underline;
-  }
-  
-  #question, #celebration {
-    padding: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.34), 0 17px 50px 0 rgba(0, 0, 0, 0.29);
-    background-color: white;
-  }
-  
-  #question {
-    padding-bottom: 100px;
-  }
-  
-  #button-container {
-    padding: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-  }
-  
-  #answers {
-    height: 80px;
-    margin-top: -120px;
-  }
-  
-  #no-button, #yes-button {
-    position: absolute;
-    display: inline-block;
-  }
-  
-  #yes-button {
-    left: 33%;
-  }
-  
-  #no-button {
-    right: 33%;
-  }
-  
-  #celebration > h1 {
-    font-family: monospace;
-    font-size: 3em;
-    animation: color-change 1s infinite;
-  }
-  
-  @keyframes color-change { /* Go over this - Compare to frames in animation*/
-    0% { color: red; }
-    50% { color: blue; }
-    100% { color: red; }
-  }
-  
-  .hidden {
-    display: none;
-  }
+/* Sets the background image and general styling for the whole page */
+html, body {
+  background-image: url("resources/img/cat-background.jpg"); /* Background image for the page */
+  text-align: center; /* Centers text on the page */
+  height: 100%; /* Ensures full height coverage */
+  width: 100%; /* Ensures full width coverage */
+}
+
+/* Styles for the body */
+body {
+  font-size: 18px; /* Sets the default font size */
+  font-family: 'Inconsolata', monospace; /* Applies a monospaced font */
+  display: flex; /* Uses flexbox for layout */
+  align-items: center; /* Centers content vertically */
+  justify-content: center; /* Centers content horizontally */
+}
+
+/* Styles for all buttons */
+button {
+  border-radius: 8px; /* Rounds the corners of buttons */
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 
+              0 17px 50px 0 rgba(0, 0, 0, 0.19); /* Adds shadow effects */
+  padding: 16px 16px; /* Adds padding inside the button */
+  font-size: 36px; /* Increases font size */
+  font-family: 'Inconsolata', monospace; /* Ensures consistent font */
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #c7c7c7; /* Changes background color on hover */
+  box-shadow: 0 12px 16px 0 rgb(255, 255, 255), 
+              0 17px 50px 0 rgb(255, 255, 255); /* Changes shadow effect */
+}
+
+/* Container for centering content */
+.container {
+  align-items: center; /* Centers content vertically */
+  display: flex; /* Uses flexbox for layout */
+  justify-content: center; /* Centers content horizontally */
+  height: 100%; /* Full height */
+  width: 100%; /* Full width */
+}
+
+/* Sets consistent width and centering for various elements */
+#question, #celebration, #main, #answers, #answers p {
+  width: 80%; /* Sets width to 80% of the container */
+  margin: auto; /* Centers the element */
+}
+
+/* Adds margin space between paragraphs inside the answers section */
+#answers > p {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* Underlines text in the question and celebration sections */
+#question, #celebration > h1 {
+  text-decoration: underline;
+}
+
+/* Styles for question and celebration sections */
+#question, #celebration {
+  padding: 20px; /* Adds padding inside the section */
+  margin-top: 20px; /* Adds space above */
+  margin-bottom: 20px; /* Adds space below */
+  border-radius: 10px; /* Rounds the corners */
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.34), 
+              0 17px 50px 0 rgba(0, 0, 0, 0.29); /* Adds shadow effects */
+  background-color: white; /* Sets background color */
+}
+
+/* Adds extra padding for the question section */
+#question {
+  padding-bottom: 100px;
+}
+
+/* Styles for the button container */
+#button-container {
+  padding: 10px; /* Adds padding */
+  margin-top: 20px; /* Adds space above */
+  margin-bottom: 20px; /* Adds space below */
+  border-radius: 10px; /* Rounds the corners */
+}
+
+/* Styles for the answers section */
+#answers {
+  height: 80px; /* Sets fixed height */
+  margin-top: -120px; /* Moves the section up */
+}
+
+/* Positions the yes and no buttons */
+#no-button, #yes-button {
+  position: absolute; /* Uses absolute positioning */
+  display: inline-block; /* Ensures buttons are displayed inline */
+}
+
+/* Positions the "Yes" button */
+#yes-button {
+  left: 33%; /* Moves the button to the left */
+}
+
+/* Positions the "No" button */
+#no-button {
+  right: 33%; /* Moves the button to the right */
+}
+
+/* Styles for the celebration message */
+#celebration > h1 {
+  font-family: monospace; /* Uses a monospaced font */
+  font-size: 3em; /* Increases font size */
+  animation: color-change 1s infinite; /* Applies a color-changing animation */
+}
+
+/* Keyframes for the color-changing animation */
+@keyframes color-change {
+  0% { color: red; } /* Starts with red */
+  50% { color: blue; } /* Changes to blue */
+  100% { color: red; } /* Changes back to red */
+}
+
+/* Hides elements that should be initially hidden */
+.hidden {
+  display: none;
+}
